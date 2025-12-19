@@ -1,0 +1,6 @@
+FROM mariadb:latest
+EXPOSE 3306
+ENV MARIADB_ROOT_PASSWORD=asd123.
+CMD ["mariadbd"]
+
+

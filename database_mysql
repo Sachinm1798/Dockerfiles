@@ -1,0 +1,7 @@
+FROM mysql:latest
+EXPOSE 3306
+ENV MYSQL_ROOT_PASSWORD=asd
+ENV MYSQL_USER=sachin
+ENV MYSQL_PASSWORD=asd
+VOLUME /var/lib/mysql
+CMD ["mysqld"]
