@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  ubuntu_apache:
+    image: ubuntu_apache:1
+    container_name: ubuntu_apache-container
+    ports:
+    - "8881:80"
+    volumes:
+    - hosting_data:/data
+    networks:
+    - network1
+volumes:
+  hosting_data:
+networks:
+  network1:
+    name: network1
+    driver: bridge
+

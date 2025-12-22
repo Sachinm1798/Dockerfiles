@@ -1,6 +1,6 @@
 FROM alpine
 RUN apk upgrade && apk add nginx
 EXPOSE 80
-COPY template1 /var/www/html
+COPY template4  /var/www/localhost/htdocs
 CMD ["nginx","-g","daemon off;"]
 
