@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  ubuntu_container:
+    image: ubuntu:latest
+    container_name: ubuntu_container
+    command: ["sleep"," infinity"]
+  almalinux_container:
+    image: almalinux:latest
+    container_name: almalinux_container
+    command: ["tail","-f","/dev/null"]
+  alpine_container:
+    image: alpine:latest
+    container_name: alpine_container
+    command: ["sleep","infinity"]
+
