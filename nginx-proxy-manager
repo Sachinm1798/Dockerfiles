@@ -1,0 +1,8 @@
+FROM jc21/nginx-proxy-manager
+EXPOSE 80
+EXPOSE 443
+EXPOSE 81
+VOLUME /data
+VOLUME /etc/letsencrypt
+
+

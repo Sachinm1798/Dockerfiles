@@ -1,0 +1,4 @@
+FROM wordpress:php8.5-fpm-alpine
+EXPOSE 80
+COPY template3 /var/www/html
+

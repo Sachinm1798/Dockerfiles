@@ -1,0 +1,6 @@
+FROM portainer/portainer:latest
+EXPOSE 9443
+EXPOSE 8000
+EXPOSE 9000
+VOLUME /data
+ENTRYPOINT ["/portainer"]

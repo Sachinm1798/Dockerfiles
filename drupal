@@ -1,0 +1,3 @@
+FROM drupal:php8.4-fpm-trixie
+EXPOSE 80
+

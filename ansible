@@ -1,0 +1,7 @@
+FROM ansible/ansible:ubuntu1404
+VOLUME /run
+VOLUME /tmp
+VOLUME /sys/fs/cgroup
+VOLUME /run/lock
+CMD ["/sbin/init"]
+
