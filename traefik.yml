@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  traefik_service:
+    image: traefik:v3.6.2
+    container_name: traefik-container
+    ports:
+    - "8888:80"
+    - "8889:8080"
+    command:
+      # Enable the Docker pr ovider and prevent all containers from being exposed by default
+    - "--providers.docker=true"
+    - "--providers.docker.exposedbydefault=false"
+      # Entrypoints for web traffic (HTTP)
+    - "--entrypoints.web.address=:80"
+      # Entrypoint for the dashboard (insecure for local development)
+    - "--api.insecure=true"
+    volumes:
+    - traefik-data:/var/run/docker.sock:ro
+    networks:
+    - traefik-net1
+
+volumes:
+  traefik-data:
+networks:
+  traefik-net1:
+    driver: bridge
+

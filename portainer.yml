@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  portainer-portainer:
+    image: portainer/portainer:latest
+    ports:
+    - "32000:9443"
+    - "32001:9000"
+    - "32002:8000"
+    volumes:
+    - portainer_data:/data
+    networks:
+    - network1
+volumes:
+  portainer_data:
+networks:
+  network1:
+
+
