@@ -1,9 +1,12 @@
 version: '9.4'
 services:
   nginx_service:
-    image: nginx:latest
+    build:
+      context: .
+      dockerfile: nginx
+    image: nginx_html_template:1
     ports:
-    -  "8889:80"
+    -  "8888:80"
     volumes:
     -  nginx_data:/data
     networks:

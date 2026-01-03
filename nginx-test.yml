@@ -1,0 +1,9 @@
+services:
+  nginx_container:
+    image: 9ae0f2417443
+    ports:
+    - "32323:80"
+    volumes:
+    - nginx_data:/data
+volumes:
+  nginx_data:
