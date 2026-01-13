@@ -2,11 +2,14 @@ version: '9.4'
 services:
   nginx_service:
     build:
+      #build and image not used together
       context: .
-      dockerfile: nginx
-    image: nginx_html_template:1
+      dockerfile: nginx           
+    image: nginx_html_template:1  
+    #assign a specific name to the created image
     ports:
     -  "8888:80"
+    container_name: nginx-temp-container
     volumes:
     -  nginx_data:/data
     networks:
