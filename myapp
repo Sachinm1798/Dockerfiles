@@ -3,10 +3,10 @@ FROM node:20-alpine
 #create a new working directory
 RUN mkdir -p /home/app 
 
-#Copy the myapp directory to image
+#Copy the myapp directory to the directory created inside container
 COPY ./app /home/app 
 
-# set default dir so that next commands executes in /home/app dir
+# set default directory so that next commands executes in /home/app directory
 WORKDIR /home/app
 
 # will execute npm install in /home/app because of WORKDIR

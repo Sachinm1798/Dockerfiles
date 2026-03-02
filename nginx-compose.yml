@@ -9,7 +9,7 @@ services:
     #assign a specific name to the created image
     ports:
     -  "8888:80"
-    container_name: nginx-temp-container
+    container_name: nginx-container
     volumes:
     -  nginx_data:/data
     networks:

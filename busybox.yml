@@ -5,3 +5,4 @@ services:
     image: busybox:latest
     container_name: busybox
     command: ["sleep","infinity"]
+    command: ["/bin/sh", "-c", "date"]
